@@ -6,20 +6,20 @@ const path = require("path");
 const PORT = 3000;
 
 // Configuración de middleware y rutas estáticas
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')));
 app.use('/bootstrap-js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')));
 
 // Configuración del motor de plantillas Handlebars
-app.engine('hbs', exphbs.engine({
-    extname: '.hbs',
+app.engine('handlebars', exphbs.engine({
+    extname: '.handlebars',
     defaultLayout: 'main', // Layout predeterminado
     layoutsDir: path.join(__dirname, 'views/layouts'), // Directorio de layouts
     partialsDir: path.join(__dirname, 'views/partials') // Directorio de parciales
 }));
 
 // Establecer el motor de plantillas Handlebars
-app.set('view engine', 'hbs');
+app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
 // Ruta raíz para renderizar el dashboard
