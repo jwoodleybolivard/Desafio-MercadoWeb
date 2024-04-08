@@ -1,0 +1,13 @@
+<!-- Plantilla para renderizar un producto -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+    <!-- Tarjeta del producto -->
+    <div class="card producto" data-nombre="{{this}}" data-imagen="/assets/img/{{this}}.png" style="width: 18rem;border:none;">
+        <!-- Imagen del producto -->
+        <img src="/assets/img/{{this}}.png" class="card-img-top" alt="{{this}}">
+        <!-- Contenido de la tarjeta -->
+        <div class="card-body">
+            <!-- Nombre del producto -->
+            <h5 class="card-title text-center">{{this}}</h5>
+        </div>
+    </div>
+</div>

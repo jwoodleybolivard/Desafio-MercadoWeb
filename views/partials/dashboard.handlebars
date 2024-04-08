@@ -1,0 +1,37 @@
+<!-- Cabecera del dashboard -->
+<h1 class="text-center">Bienvenido al Mercado Web, seleccione su producto</h1>
+
+<!-- Sección de productos -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Iterar sobre cada producto y renderizar el parcial "producto" -->
+            {{#each products}}
+                {{> producto nombre=this}}
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+<!-- Modal para mostrar los productos seleccionados -->
+<div class="modal" tabindex="-1" id="productosModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Encabezado del modal -->
+            <div class="modal-header">
+                <h5 class="modal-title">Productos Seleccionados</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- Cuerpo del modal -->
+            <div class="modal-body">
+                <!-- Mensaje predeterminado cuando el carrito está vacío -->
+                <p>Carrito de compras: VACÍO</p>
+            </div>
+            <!-- Pie del modal con botones de acción -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Comprar</button>
+            </div>
+        </div>
+    </div>
+</div>
