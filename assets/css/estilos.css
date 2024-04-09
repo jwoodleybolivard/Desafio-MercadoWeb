@@ -1,0 +1,17 @@
+/* Estilos para el contenedor de productos en el modal */
+.productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Estilos para cada producto seleccionado en el modal */
+.producto-seleccionado {
+  margin: 10px;
+  text-align: center;
+}
+
+/* Estilos para el botón de eliminar producto */
+.eliminar-btn {
+  cursor: pointer;
+}
